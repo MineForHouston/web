@@ -18,3 +18,5 @@ nconf.argv()
     .file({
         file: file
     });
+
+module.exports = nconf;
