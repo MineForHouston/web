@@ -19,7 +19,7 @@ class NicehashSync {
             let duration = moment.duration(end.diff(moment(stats.lastRun)));
             let hours = duration.asHours();
             if (hours < 1) {
-                return;
+                return stats.save();
             }
             console.log('executing nice hash sync');
             return rp.get(`https://api.nicehash.com/api?method=stats.provider.workers&addr=${this.walletAddress}`)

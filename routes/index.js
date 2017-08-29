@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
   PlatformStats.findOne().exec()
   .then(stats => {
     if (!stats) {
+      stats = {};
       stats.amountRaised = 2000;
       stats.workers = 20;
       stats.rate = 100;
