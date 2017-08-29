@@ -18,7 +18,8 @@ class NicehashSync {
             let end = moment(new Date());
             let duration = moment.duration(end.diff(moment(stats.lastRun)));
             let hours = duration.asHours();
-            if (hours < 1) {
+            console.log(hours);
+            if (hours < 0.1) {
                 return stats.save();
             }
             console.log('executing nice hash sync');
@@ -46,10 +47,10 @@ class NicehashSync {
             .then(response => {
                 response = JSON.parse(response);
                 let totalRaisedDollars = totalRaisedBitcoin * response.USD.buy;
-                console.log(`${stats.amountRaised}-${totalRaisedDollars}`);
-                let rate = totalRaisedDollars - stats.amountRaised;
+                console.log(`total amount raised: ${stats.amountRaised}-${totalRaisedDollars}`);
+                let ratePerHour = (totalRaisedDollars - stats.amountRaised)/duration;
                 stats.amountRaised = totalRaisedDollars;
-                stats.rate = rate;
+                stats.rate = ratePerHour * 24;
                 stats.lastRun = new Date();
                 console.dir(stats.toObject());
                 return stats.save();
