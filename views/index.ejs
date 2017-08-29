@@ -1,13 +1,581 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Mine for Houston</title>
+
+    <!-- Styles -->
+    <link href="assets/css/app.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.ico">
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Mine for Houston</p>
-    <p>We have raised $<%= amountRaised %> for the Houston disaster relief effort.</p>
-    <p>With the help of <%= workers %> volunteer miners we're raising $<%= rate %> per day.</p>
+
+  <body class="sticky-nav transparent-nav">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a class="logo-default" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+          <a class="logo-transparent" href="index.html"><img src="assets/img/logo-alt.png" alt="logo"></a>
+        </div>
+
+        <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+        <ul class="nav-menu">
+          <li><a class="active" href="http://shamsoft.net/thesplash">Overview</a></li>
+          <li><a href="http://shamsoft.net/thesplash/doc">Documentation</a></li>
+          <li><a href="http://themeforest.net/item/thesplash-template-landing-page/14375892/comments">Support</a></li>
+          <li>
+            <a href="#">Submenu</a>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Subitem</a></li>
+              <li><a href="#">Another link</a></li>
+            </ul>
+          </li>
+          <li><a class="menu-highlighted" href="http://themeforest.net/item/thesplash-template-landing-page/14375892?ref=shamsoft">Buy Now</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END Navigation -->
+
+    <!-- Site header -->
+    <header class="site-header color-alt overlay-black size-full text-center" style="background-image: url(assets/img/bg-page.jpg)">
+      <div class="container">
+        <h1><strong>Mine</strong> for <strong>Houston</strong></h1>
+        <h4>Help us Help Hurricane Harvey Victims with your Computer</h4>
+        <h5><strong><%=workers%></strong> Virtual Volunteers have raised  $<%= amountRaised %></h5>
+        <br><br><br>
+        <h6>Download the Client and Volunteer your Computer Now</h6>
+        <a class="btn btn-lg btn-white btn-outline btn-round" href="#demos"><span style="padding: 0 30px;">Download Worker</span></a>
+        <a class="btn btn-lg btn-white btn-outline btn-round" href="#demos"><span style="padding: 0 30px;">How It Works</span></a>
+      </div>
+    </header>
+    <!-- END Site header -->
+
+
+    <!-- Main container -->
+    <main>
+
+
+      <section id="demos" class="no-border-bottom bg-gray-light">
+        <div class="container">
+          <header class="section-header">
+            <h2>Video introduction</h2>
+            <p>Watch this 2 minutes video to become familiar with power of this template.</p>
+          </header>
+
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <div class="intro-video" data-pe-videoid="nrJtHemSPW4"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <section id="demos" class="no-border-bottom">
+        <div class="container">
+          <header class="section-header">
+            <h2>Available <strong>demos</strong></h2>
+            <p>View one of our demo sites by choosing one of them below.</p>
+          </header>
+
+          <div class="filter-demo">
+            <button class="btn active">All</button>
+            <button class="btn" data-group="blog">Blog</button>
+            <button class="btn" data-group="onepage">One page</button>
+            <button class="btn" data-group="portfolio">Portfolio</button>
+            <button class="btn" data-group="shop">Shop</button>
+          </div>
+
+          <br><br>
+
+          <ul class="demos filterable-demo">
+            <li data-groups="blog">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo1.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="onepage">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo2.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="portfolio,blog">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo3.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="shop,blog">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo4.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="portfolio">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo5.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="onepage,blog">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo6.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="shop">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo7.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="blog,shop">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo8.png" alt="screenshot">
+              </a>
+            </li>
+
+            <li data-groups="portfolio,onepage">
+              <a href="#" target="_blank">
+                <img class="img-fade img-bordered" src="assets/img/demo9.png" alt="screenshot">
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </section>
+
+
+
+      <section class="no-border-bottom bg-gray-lighter">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-sm-6 content-center">
+              <header class="section-header text-right">
+                <h2>Full responsive</h2>
+                <p>Your template works on any device: desktop, tablet or mobile. It'll adjust the size and position of components based on the screen size of user.</p>
+              </header>
+            </div>
+
+            <div class="col-sm-6 content-center">
+              <img src="assets/img/feature-1.png" alt="img">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <section class="no-border-bottom">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-sm-6 content-center">
+              <img src="assets/img/feature-2.jpg" alt="img">
+            </div>
+
+            <div class="col-sm-6 content-center">
+              <header class="section-header text-left">
+                <h2>Clean code</h2>
+                <p>You can find our code well organized, commented and readable. It uses minimal coding to reduce the size of template. Apart from that, you've access to SCSS and Grunt files to make your desire changes easily.</p>
+              </header>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <section class="no-border-bottom bg-gray-lighter">
+        <div class="container">
+
+          <div class="row">
+            
+            <div class="col-sm-6 content-center">
+              <header class="section-header text-right">
+                <h2>Well documented</h2>
+                <p>As you can see in the online documentation, we provided a comprehensive documentation. It comes with very detailed docs and includes options, features and descriptions with images. This documentation has developed by <a href="http://themeforest.net/item/theguide-online-documentation-template/14239305?ref=shamsoft" target="_blank">TheGuide</a>.</p>
+              </header>
+            </div>
+
+            <div class="col-sm-6 content-center">
+              <img class="img-bordered" src="assets/img/feature-3.jpg" alt="img">
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+      <section class="no-border-bottom">
+        <div class="container">
+          <header class="section-header">
+            <h2>Lot's of components</h2>
+            <p>You're empowered by a bunch of components to help you develop much more faster.</p>
+          </header>
+
+
+          <ul class="features icon-image-sided bg-colored cols-2">
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Customizable header</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Demo images</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Demo category</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Feature box</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Testimonials</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Video introduction</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Stat counter</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+
+            <li>
+              <div class="icon"><img src="assets/img/placeholder-sm.png" alt="placeholder"></div>
+              <h5>Skinable</h5>
+              <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <section class="section-sm no-border-bottom overlay-black" style="background-image: url(assets/img/bg-counter.jpg)">
+        <div class="container">
+
+          <div class="row">
+            <div class="counter color-alt col-md-3 col-sm-6">
+              <i class="ti-user"></i>
+              <p><span data-from="0" data-to="2350">0</span>+</p>
+              <h6>Satisfied users</h6>
+            </div>
+
+            <div class="counter color-alt col-md-3 col-sm-6">
+              <i class="ti-time"></i>
+              <p><span data-from="0" data-to="1200" data-speed="2200">0</span>+</p>
+              <h6>Hours of coding</h6>
+            </div>
+
+            <div class="counter color-alt col-md-3 col-sm-6">
+              <i class="ti-panel"></i>
+              <p><span data-from="0" data-to="30" data-speed="2500">0</span>+</p>
+              <h6>Components</h6>
+            </div>
+
+            <div class="counter color-alt col-md-3 col-sm-6">
+              <i class="fa fa-code"></i>
+              <p><span data-from="0" data-to="10000" data-speed="3000">0</span>+</p>
+              <h6>Line of code</h6>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="no-border-bottom">
+        <div class="container">
+          <header class="section-header">
+            <h2>User reviews</h2>
+            <p>Read why our customers recommend our design.</p>
+          </header>
+
+          <div class="review-slider">
+            <ul class="reviews">
+
+              <li>
+                <h5>Design Quality</h5>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>Good design set that will hopefully expand as time goes on. Very easy to code with, lots of examples and snippets.</p>
+                <h6>shamsoft</h6>
+              </li>
+
+              <li>
+                <h5>Flexibility</h5>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>It works perfect! Very easy to use.</p>
+                <h6>reviewer</h6>
+              </li>
+
+              <li>
+                <h5>Code Quality</h5>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>Scelerisque blandit magna. Integer facilisis orci nunc. Aliquam gravida lectus quis ipsum euismod, vitae vehicula mauris tempus. Maecenas finibus massa ac massa posuere, non volutpat magna efficitur.</p>
+                <h6>someuser</h6>
+              </li>
+
+              <li>
+                <h5>Customizability</h5>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>Etiam sagittis pretium risus nec efficitur. Aliquam non lacinia libero. Maecenas quam odio, pharetra quis nunc nec, volutpat aliquam nisi.</p>
+                <h6>anotheruser</h6>
+              </li>
+
+              <li>
+                <h5>Customer Support</h5>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>Proin et pharetra nibh, in luctus erat. Nulla fringilla, mauris et condimentum fermentum, leo ex blandit erat, nec placerat turpis dui vel lorem. Sed pretium ultrices imperdiet. Mauris vitae fermentum nunc.</p>
+                <h6>sampleone</h6>
+              </li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </section>
+
+
+
+      <section class="no-border-bottom bg-repeat text-center overlay-white overlay-pale" style="background-image: url(assets/img/bg-pattern2.png)">
+        <div class="container">
+          <h2 style="font-weight:200"><strong>Buy</strong> It Now</h2>
+          <h5>It'll be a greate advantage to your next template.</h5>
+          <br><br>
+          <a class="btn btn-lg btn-round" href="http://themeforest.net/item/thesplash-template-landing-page/14375892"><span style="padding: 0 30px">Buy on themeforest</span></a>
+        </div>
+      </section>
+
+
+
+    </main>
+    <!-- END Main container -->
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <ul class="footer-links">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="footer-socials">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyrights &copy; 2016 All Rights Reserved by <a href="http://themeforest.net/user/shamsoft">ShaMSofT</a>.</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+    <!-- END Site footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/app.min.js"></script>
+
+
+
+    <!-- Skin switcher -->
+    <!-- Manually link your desire skin after app.min.css -->
+    <style type="text/css">
+      .skins {
+        position: fixed;
+        top: 100px;
+        left: -222px;
+        transition: .3s ease-in-out;
+      }
+
+      .skins:hover {
+        left: 0;
+      }
+
+      .skin-colors {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        background-color: #fff;
+        width: 222px;
+        border: 1px solid #e7e7e7;
+      }
+
+      .skin-colors li {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        margin: 4px;
+        transition: .3s ease-in-out;
+      }
+
+      .skin-colors li:hover {
+        opacity: .7;
+      }
+
+      .skin-colors li.active::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 20px;
+        width: 34px;
+        line-height: 34px;
+        text-align: center;
+        position: absolute;
+        color: #fff;
+      }
+
+      .skin-toggler {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        right: -49px;
+        top: 0;
+        background-color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: #888;
+        border: 1px solid #e7e7e7;
+        border-left: 0;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(function() {
+
+        $("head").append('<link id="skin-css" rel="stylesheet">');
+
+        $('.skin-colors li').on('click', function() {
+          $('.skins li').removeClass('active');
+          $(this).addClass('active');
+          $('#skin-css').attr('href', 'assets/css/skin-'+ $(this).data('skin') +'.css');
+        });
+
+      });
+    </script>
+
+    <div class="skins">
+      <ul class="skin-colors">
+        <li data-skin="default" style="background-color: #f36" class="active"></li>
+        <li data-skin="aqua" style="background-color: #1abac8"></li>
+        <li data-skin="blue" style="background-color: #159eee"></li>
+        <li data-skin="brown" style="background-color: #8d6658"></li>
+        <li data-skin="gray" style="background-color: #b2b2b2"></li>
+        <li data-skin="green" style="background-color: #1abc9c"></li>
+        <li data-skin="orange" style="background-color: #ff8a00"></li>
+        <li data-skin="pink" style="background-color: #e5356f"></li>
+        <li data-skin="purple" style="background-color: #9e7dd3"></li>
+        <li data-skin="red" style="background-color: #e54e53"></li>
+        <li data-skin="teal" style="background-color: #3aa99e"></li>
+        <li data-skin="yellow" style="background-color: #ffcd00"></li>
+      </ul>
+
+      <span class="skin-toggler"><i class="fa fa-cog"></i></span>
+    </div>
+    <!-- END Skin switcher -->
+
+
+
   </body>
 </html>
